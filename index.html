@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+    .product-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      background: white;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .product-card img {
+      max-width: 100%;
+      height: 150px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }  .offer-text {
+      color: green;
+      font-weight: bold;
+    }
+     .scroll-section {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 10px;
+    }
+    .product-card {
+      display: inline-block;
+      width: 160px;
+      margin-right: 10px;
+      vertical-align: top;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      background-color: #fff;
+    }    .product-card img {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 8px;
+    }
+    .offer {
+      color: green;
+      font-weight: bold;
+    }
+    .section-title {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+     #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #0d6efd;
+      color: white;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #backToTopBtn:hover {
+      background-color: #0b5ed7;
+    }
+    #container{
+      grid-template-columns: auto auto;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white fixed-top">
+  <a class="navbar-brand" href="index.html">Myntra</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+<span class="ti-align-justify navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="Men.html"><b>Men</b> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Women.html"><b>Women</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="Kids.html"><b>Kids</b></a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link disabled" href="index.html"><b>Home</b></a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link disabled" href="Beauty.html"><b>Beauty</b></a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link disabled" href="Genz.html"><b>Genz</b></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><a href="login.html">login Now</a></button>
+    </form>
+  </div>
+</nav>
+<br>
+<div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://cashlelo.com/wp-content/uploads/2024/11/Myntra-Fashion-Carnival-Sale.jpg" alt="First slide" height="350px" width="30px">
+    </div>
+  </div>
+</div>
+<br><br>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/INSLGW/af_pc_2x._CB792409181_.jpg" alt="First slide" height="300" width="200">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img23/Beauty/GW/yesbank/makeup_PC._CB796616147_.png" alt="Second slide" height="300" width="200">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://images-eu.ssl-images-amazon.com/images/G/31/img24/Media/BAU/PC_Hero_2x-toys_1._CB582765723_.jpg" alt="Third slide" height="300" width="200">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<br>
+<h1><B><center><marquee behavior="" direction="">BEST OF ELECTRONICS</marquee></center></B></h1>
+<br><br>
+<div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/240/240/xif0q/smartwatch/5/v/s/-original-imagxrhetgfuebnn.jpeg?q=60" class="card-img-top" height="200px" width="250px" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>BOAT</b></h5>
+        <p class="card-text">boAt Storm call 3 w/TBT Navigation,Watch Face Studio,1.83''(4.6 cm)HD Display,QR Tray Smartwatch  (Black Metal Strap, Free Size)
+.</p>
+<p>Special price</p>
+<h4><i>Form</i>:-1549 <del>8499</del> 81%off</h4>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+<button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/240/240/kz1lle80/smartwatch/m/f/q/-original-imagb54tb6fpurze.jpeg?q=60" height="200px" width="250px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>Noise</b></h5>
+        <p class="card-text">Noise Icon 2 1.8'' Display with Bluetooth Calling, Women's Edition, AI Voice Assistant Smartwatch  (Rose Pink Strap, Regular).</p>
+        <p>Special price</p>
+        <h5><b>Form:-</b>1399 <del>5999</del> 76% off</h5>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+        <button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/240/240/l58iaa80/headphone/k/z/m/nord-buds-ce-oneplus-original-imagfyk4hyvgg6ze.jpeg?q=60" height="200px" width="250px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>Grab Now</b></h5>
+        <p class="card-text">Boult Astra with Quad Mic ENC, 48Hrs Battery, Low Latency Gaming, Made in India, 5.3v Bluetooth  (White Opal, True Wireless)
+.</p>
+<p>Special price</p>  
+<div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+<h4><b>Form:-</b>1199<del> 3499</del> 65%off</h4>
+<button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/speaker/soundbar/g/8/f/zeb-astra-40-zeb-pspk-44-zebronics-original-imahdhykrkzzhjpg.jpeg?q=70" height="175px" width="250px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Black,Stereo channel</h5>
+        <p class="card-text">ZEBRONICS Astra 40 (PSPK 44), Upto 22 Hours Playback, BTv5.3 | USB | AUX | mSD | TWS 20 W Bluetooth Soundbar  (Black, Stereo Channel)#JustHere
+.</p>
+<p>Special price</p>
+<h4><b>Form:-</b>1399 <del>2199</del> 36%off</h4>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+<button type="button" class="btn btn-outline-danger">Buy Now</button>      </div>
+    </div>
+  </div>
+</div>
+<br>
+<section>
+  <div class="container my-4">
+    <div class="mb-4">
+    <div class="section-title">Fashion's Top Deals</div>
+    <div class="scroll-section">
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71nnMbsK4-L._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Slippers">
+        <div>YouBella Jewellery </div>
+        Bridal  Neacklace
+        <div class="offer">Min. 70% Off</div>
+      </div>
+         <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71ooQyvpGCL._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Slippers">
+        <div>Rhodium PlatedSilver</div>
+        TonedWhiteAmerican
+        <div class="offer">Min. 70% Off</div>
+      </div>   <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/41crranphBL._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Slippers">
+        <div>LONDONALLEYMen's</div>
+       ReversibleLeatherbelt
+        <div class="offer">Min. 70% Off</div>
+      </div>   <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/51c1nV5z-OL._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Slippers">
+        <div>Van Heusen Men's</div>
+         Regular Fit T-Shirt
+        <div class="offer">Min. 70% Off</div>
+      </div>   <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/91BRWVAAYNL._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Slippers">
+        <div>Men's Cotton Rich</div>
+        Textured Polo Tshirts 
+        <div class="offer">Min. 70% Off</div>
+      </div>
+         <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61QPz5KaqDL._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Slippers">
+        <div>KLOSIA Women's</div>
+        Kurta Pant Dupatta 
+        <div class="offer">Min. 70% Off</div>
+      </div>   <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61z-+e4q6CL._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Slippers">
+        <div>Men'sCottonRegulars</div>
+         Fit Chino Shorts
+        <div class="offer">Min. 70% Off</div>
+      </div>   <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/51HEHE5tnJL._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Slippers">
+        <div>Van Heusen Men's</div>
+        Cotton Solid Regular
+        <div class="offer">Min. 70% Off</div>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81yCnLD5L2L._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="T-shirts">
+        <div> Leather Watch</div>
+       Organiser Box
+        <div class="offer">Min. 50% Off</div>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/51qPeNQiiKL._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Shirts">
+        <div>Boys </div>
+        Gloves for Protection
+        <div class="offer">Min. 50% Off</div>
+      </div>
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/91xWNfr682S._SX240_QL100_AC_SCLZZZZZZZ_.jpg" alt="Ethnic">
+        <div>Pack and Sling bag</div>
+        <div class="offer">Min. 50% Off</div>
+      </div>
+  </div>
+</section>
+<h1>Beauty,Food,Toys&More</h1>
+<div class="row row-cols-1 row-cols-md-8 g-8">
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/remote-control-toy/w/w/h/remote-control-toy-car-electric-chargeable-3d-lightning-black-1-original-imagz45fdmguwkkg.jpeg?q=70" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">CADDLE & TOES Remote Control Toy Car Electric Chargeable 3D Lightning (Black)  (Black)
+.</p>
+<p>Special price</p>
+<h4><b>Form:-</b>315<del> 1999</del> 84%off</h4>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+<button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/612/612/kf1fo280/coffee/g/y/b/200-original-extraforte-extra-strong-coffee-instant-coffee-glass-original-imafvkf6gdxd59yu.jpeg?q=70" height="145px" width="240px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Coffee powder</h5>
+                <p class="card-text">Nescafe Original Extraforte (Extra Strong) Coffee Instant Coffee  (200 g).</p>
+<p>Special price</p>
+<h4><b>Form:-</b>660<del> 875</del>24%off</h4>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+<button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://m.media-amazon.com/images/I/51ScWOsaMuL._SX300_SY300_QL70_FMwebp_.jpg" height="70px" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Geared cycles</h5>
+        <p class="card-text">BLAKENTO Kids Cycle for Girls and Boys |20T Ace Crew Cycle for Kids 6 to 9 Years| Premium Matte Finished White & Orange, Rigid, ?20 Inches
+.</p>
+<p>Special price</p>
+<h4><b>Form:-</b>3287<del> 9999</del> 67%off</h4>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+<button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/pen/t/p/h/-original-imah2g6tzddbdxqx.jpeg?q=70" height="150px" width="250px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Top selling stationery</h5>
+        <p class="card-text">Reynolds DFine Ball Pen  (Pack of 70, Ink Color - Blue).</p>
+        <p>Special price</p>
+         <h4><b>Form:-</b>220<del> 700</del> 68%off</h4>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+         <button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>
+    <div class="col">
+    <div class="card">
+      <img src="https://rukminim1.flixcart.com/image/240/240/kzegk280/action-figure/9/v/t/3-30155-mcfarlane-2-5-original-imagbeyyzehpyk2m.jpeg?q=60" height="60px" width="100px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Best of action toys</h5>
+        <p class="card-text"></p>dribblr Dummy 13 Action Figure Robot | Build It Yourself Toy | 3D Printed (5.5inches)  (White, Multicolor)
+.  </p>
+<p>Special price</p>
+<h4><b>Form:-</b>272 <del>399</del> 31%off</h4>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+<button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/shopsy-stuffed-toy/5/l/b/a-premium-quality-of-3-feet-blue-teddy-bear-for-your-love-original-imah7d6cmz69zjh4.jpeg?q=70" height="150px" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Soft toys</h5>
+        <p class="card-text">Ziraat Stuffed Teddy Bear 4 Feet Long Soft Sky Blue bear BIRTHDAY GIFT - 121 cm  (Blue)
+.</p>
+<p>Special price</p>
+<h4><b>Form:-</b>350 <del>1699</del> 79%off</h4>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+<button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>  <div class="col">
+    <div class="card">
+      <img src="https://rukminim1.flixcart.com/image/240/240/k6fd47k0/nut-dry-fruit/p/z/7/200-100-natural-california-pouch-happilo-original-imafzvw2tcazeur6.jpeg?q=60" height="150" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Dry fruits</h5>
+        <p class="card-text">Happilo Premium Naturals Californian Almonds Almonds  (1 x 200 g)
+.</p>
+<p>Special price</p>
+<h4><b>Form:-</b>261 <del> 275</del> 5%off</h4>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+<button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>  <div class="col">
+    <div class="card">
+      <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/jam-spread/w/m/r/510-chocolate-peanut-butter-with-almond-crunch-jar-1-nut-butter-original-imagxhczsfqr7x2h.jpeg?q=70" height="180px" width="250px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Food Spreads</h5>
+        <p class="card-text">MYFITNESS Chocolate Peanut Butter with Almond Crunch  (510 g).</p>
+        <h4><b>Form:-</b>322 <del>419</del> 23%off</h4>
+          <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+        <button type="button" class="btn btn-outline-danger">Buy Now </button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<h1>Sports,Healthcare & more</h1>
+<br>
+<div class="row row-cols-1 row-cols-md-6 g-6">
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim1.flixcart.com/image/240/240/kl5hh8w0/puzzle/g/n/g/60-wooden-earth-jigsaw-puzzle-60-pcs-webby-original-imagyc8hsdztzdzb.jpeg?q=60" height="150px" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Puzzles&cubes</h5>
+        <p class="card-text"></p>
+        <h5><b>Form:-</b>79</h5>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+        <button type="button" class="btn btn-outline-danger">Buy Now</button>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim1.flixcart.com/image/240/240/kkimfm80/tea/z/n/1/premium-pouch-regular-tea-powder-tata-original-imafzuf2mnubzphd.jpeg?q=60" height="150px" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">TeaPowder</h5>
+        <h5><b>Form:-</b>75%off</h5>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+                <button type="button" class="btn btn-outline-danger">Buy Now</button>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+    <div class="col">
+    <div class="card">
+      <img src="https://rukminim1.flixcart.com/image/240/240/ks6ef0w0/cereal-flake/q/w/h/1-oats-veggies-masala-oats-pouch-yogabar-original-imag5suhzvwy3xh4.jpeg?q=60" height="150px" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Breakfastcereal</h5>
+         <h5><b>Form:-</b>75%off</h5>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+          <button type="button" class="btn btn-outline-danger">Buy Now</button>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>  <div class="col">
+    <div class="card">
+      <img src="https://rukminim1.flixcart.com/image/240/240/kiqbma80-0/musical-toy/s/k/b/xylophone-guitar-wooden-kids-first-musical-sound-instrument-toy-original-imafyfszcjkjcwwz.jpeg?q=60" height="150px" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Musical toys</h5>
+        <h5><b>Form:-</b>Under199</h5>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+
+        <button type="button" class="btn btn-outline-danger">Buy Now</button>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim1.flixcart.com/image/240/240/krgohow0/learning-toy/1/a/h/mapology-ultimate-indian-combo-india-with-capitals-map-puzzle-original-imag59f2vyh63v9x.jpeg?q=60" height="150px" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Learing&Education...</h5>
+        <h5><b>Form:-</b>Up to 80%off</h5>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+        <button type="button" class="btn btn-outline-danger">Buy Now</button>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="https://rukminim1.flixcart.com/image/240/240/kcjexe80/honey/w/y/4/1-honey-saffola-original-imaftn9ppz2shxzg.jpeg?q=60" height="150px" width="200px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Honey</h5>
+        <h5><b>Form:-</b><div class="offer-text">Up to. 70% Off</div></h5>  <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+        <button type="button" class="btn btn-outline-danger">Buy Now</button>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div>
+ <div class="container my-4">
+  <h4>Fashion's Top Deals</h4>
+  <div class="row g-3 mt-3">
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/420/420/xif0q/shopsy-slipper-flip-flop/x/s/d/9-waker-maan-grey-original-imagpkf5bbd8khmv.jpeg?q=60" alt="Dry Fruit">
+        <div><b>Maan</b></div>
+        Men Slippers  (Grey, Black , 10)
+        <div class="offer-text">Min.70% Off</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/420/420/xif0q/t-shirt/e/d/c/xxl-mens-strip-polo-hs-black-red-tb-blue-original-imahfdzkrtqyqtzx.jpeg?q=60" alt="Cycle">
+        <div><b>Men's T-shirt</b></div>
+        Men Striped Polo Neck Cotton Blend Black, Red T-Shirt
+        <div class="offer-text">Min. 50% Off</div>
+      </div>
+    </div>    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/420/420/xif0q/shirt/u/r/z/3xl-met-veb-formal-wine-s-jadouncreation-original-imah5bzpmfgetbbb.jpeg?q=60" alt="Helmet">
+        <div><b>Casual shirts</b></div>
+        Men Regular Fit Solid Spread Collar Casual Shirt#JustHere
+        <div class="offer-text">Min. 50% Off</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/420/420/xif0q/ethnic-set/e/9/8/xl-tf-rani101-tribalfit-original-imah7v6anwzx34bh.jpeg?q=60" alt="Diapers">
+        <div><b>Women's Ethnic Sets</b></div>
+        Women Viscose Rayon Kurta Pant Dupatta Set
+        <div class="offer-text">Min. 50% Off</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/420/420/xif0q/ethnic-set/e/9/8/xl-tf-rani101-tribalfit-original-imah7v6anwzx34bh.jpeg?q=60" alt="Diapers">
+        <div><b>Women's Ethnic Sets</b></div>
+        Women Viscose Rayon Kurta Pant Dupatta Set
+        <div class="offer-text">Min. 50% Off</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/420/420/xif0q/ethnic-set/e/9/8/xl-tf-rani101-tribalfit-original-imah7v6anwzx34bh.jpeg?q=60" alt="Diapers">
+        <div><b>Women's Ethnic Sets</b></div>
+        Women Viscose Rayon Kurta Pant Dupatta Set
+        <div class="offer-text">Min. 50% Off</div>
+      </div>
+    </div>
+    <div class="col-6 col-md-3">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/420/420/xif0q/ethnic-set/e/9/8/xl-tf-rani101-tribalfit-original-imah7v6anwzx34bh.jpeg?q=60" alt="Diapers">
+        <div><b>Women's Ethnic Sets</b></div>
+        Women Viscose Rayon Kurta Pant Dupatta Set
+        <div class="offer-text">Min. 50% Off</div>
+      </div>
+    </div><div class="col-6 col-md-3">
+      <div class="product-card">
+        <img src="https://rukminim1.flixcart.com/image/420/420/xif0q/ethnic-set/e/9/8/xl-tf-rani101-tribalfit-original-imah7v6anwzx34bh.jpeg?q=60" alt="Diapers">
+        <div><b>Women's Ethnic Sets</b></div>
+        Women Viscose Rayon Kurta Pant Dupatta Set
+        <div class="offer-text">Min. 50% Off</div>
+      </div>
+    </div>
+ </div>  
+ </div>
+</div>
+<div class="card bg-dark text-white">
+  <h1><center>See personalized recommendations</center></h1>
+  <div class="card-img-overlay">
+    <h5 class="card-title"></h5>
+    <p class="card-text"></p>
+    <br>
+    <a href="login.html"><center>Login Now</center></a>
+    <p class="card-text"></p>
+  </div>
+</div>
+<br><br>
+<footer class="bg-light text-dark pt-4 border-top">
+  <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><center>Back to up</center></button>
+  <script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+  <div class="container">
+    <div class="row"
+      class="col-md-3 col-6 mb-3">
+      <div>
+        <h6 class="text-uppercase fw-bold">Get to Know Us</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-dark text-decoration-none">About Myntra</a></li>
+          <li><a href="Home.html" class="text-dark text-decoration-none">Careers</a></li>
+          <li><a href="login.html" class="text-dark text-decoration-none">Press</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-6 mb-3">
+        <h6 class="text-uppercase fw-bold"> Connect with Help</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark text-decoration-none">Payments</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Shipping</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Cancellation</a></li>
+        </ul>
+      </div><div class="col-md-3 col-6 mb-3">
+        <h6 class="text-uppercase fw-bold">Social</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/" class="text-dark text-decoration-none">Facebook</a></li>
+          <li><a href="https://x.com/" class="text-dark text-decoration-none">Twitter</a></li>
+          <li><a href="https://www.youtube.com/" class="text-dark text-decoration-none">YouTube</a></li>
+        </ul>
+      </div><div class="col-md-3 col-6 mb-3">
+        <h6 class="text-uppercase fw-bold">Contact Us</h6>
+        <ul class="list-unstyled">
+          <li><span class="text-muted small">Email:satya8700@gmail.com</span></li>
+          <li><span class="text-muted small">Phone: +91 12345 67890</span></li>
+          <li><span class="text-muted small">Address: kanpur, India</span></li>
+        </ul>
+      </div>
+    </div> <div class="text-center py-3 border-top">
+      <small class="text-muted">&copy; 2025 MyStore. devloped by satyam kumar jha</small>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

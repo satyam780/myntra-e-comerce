@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+}
+
+.slider-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+.card {
+  min-width: 180px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  text-align: center;
+  padding: 10px;
+}
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+.title {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.price {
+  font-size: 14px;
+  color: #000;
+}
+.old {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 5px;
+}    
+.carousel-container {
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-snap-type: x mandatory;
+    }
+
+    .carousel-item-custom {
+      display: inline-block;
+      scroll-snap-align: start;
+      width: 200px;
+      margin-right: 15px;
+    }
+
+    .carousel-item-custom img {
+      width: 100%;
+      border-radius: 10px;
+ }
+
+    @media (max-width: 768px) {
+      .carousel-item-custom {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .carousel-item-custom {
+        width: 80%;
+      }
+    }
+ #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: #0d6efd;
+      color: white;
+      cursor: pointer;
+      padding: 10px 15px;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    #backToTopBtn:hover {
+      background-color: #0b5ed7;
+    }
+    #container{
+      grid-template-columns: auto auto;
+    }
+    </style>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="index.html">Myntra</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="Men.html"><b>Men</b><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Women.html"><b>Women</b></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="Kids.html"><b>Kids</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.html"><b>Home</b></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="Beauty.html"><b>Beauty</b></a>
+      </li> <li class="nav-item">
+        <a class="nav-link" href="Genz.html"><b>Genz</b></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<body>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAU/Unrec/Headers/PC/199_unrec_header_pc._SX3000_QL85_FMpng_.png" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAU/Unrec/Headers/PC/BXGY_pc._SX3000_QL85_FMpng_.png" alt="Second slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<br>
+<div class="container my-5">
+  <h4 class="mb-4">🛍️ Under 499| Beauty & Makeup</h4>
+  <div class="slider-container">
+  <div class="card">
+          <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Face_washes._SY530_QL85_FMpng_.png" height="150px" width="200px" alt="Image 1">
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1399</span> ₹499</p>
+  </div>
+
+  <div class="card">
+    <p class="title"></p>
+          <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/soaps._SY530_QL85_FMpng_.png" height="150px" width="200px" alt="Image 2">
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div>
+  <div class="card">
+          <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/sunscreens._SY530_QL85_FMpng_.png" height="150px" width="200px" alt="Image 3">
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div><div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_3._CB544074864_.png" height="100px" width="100px" alt="Casual Shorts" />
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div><div class="card">
+          <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Creams__Moisturisers._SY530_QL85_FMpng_.png" height="150px" width="200px" alt="Image 4">
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div>
+  <div class="card">
+          <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Deos._SY530_QL85_FMpng_.png" height="150px" width="200px" alt="Image 6">
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div><div class="card">
+          <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Shower_Gels._SY530_QL85_FMpng_.png" height="150px" width="200px" alt="Image 6">
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div><div class="card">
+          <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Lip_Balms._SY530_QL85_FMpng_.png" height="150px" width="200px" alt="Image 6">
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div>
+</div>
+  <div class="carousel-container d-flex">
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/41W4JRKxo8L.AC_SX250.jpg" height="150px" width="200px" alt="Image 1">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/31pRgWEOPiL.AC_SX250.jpg" height="150px" width="200px" alt="Image 2">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/31qiUGD3+FL.AC_SX250.jpg" height="150px" width="200px" alt="Image 3">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/419wOlkkGqL.AC_SX250.jpg" height="150px" width="200px" alt="Image 4">
+    </div>
+<div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/31+54OHL8WL.AC_SX250.jpg" height="150px" width="200px" alt="Image 5">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/41oFB2tM5BL.AC_SX250.jpg" height="150px" width="200px" alt="Image 6">
+    </div>
+      <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/41ps8OKIeeL.AC_SX250.jpg" height="150px" width="200px" alt="Image 2">
+    </div>  <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/3158BCnRsLL.AC_SX250.jpg" height="150px" width="200px" alt="Image 2">
+    </div>  <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/I/31eaaiu67lL.AC_SX250.jpg" height="150px" width="200px" alt="Image 2">
+    </div>
+  </div>
+</div>
+<br>
+  <b>Makeup Zone</b>
+
+</h3>
+<div class="slider-container">
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_1._CB544074864_.png" height="100px" width="100px" alt="Crisp Shirts" />
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1399</span> ₹499</p>
+  </div>
+
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_2._CB544074864_.png" height="100px" width="100px" alt="Casual Shorts" />
+    <p class="title"></p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div>
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_6._CB544074864_.png" height="100px" width="100px" alt="Casual Shorts" />
+    <p class="title">Casual Shorts</p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div><div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_3._CB544074864_.png" height="100px" width="100px" alt="Casual Shorts" />
+    <p class="title">Casual Shorts</p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div><div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_9._CB544074864_.png" height="100px" width="100px" alt="Casual Shorts" />
+    <p class="title">Casual Shorts</p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div>
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_5._CB544074864_.png" height="100px" width="100px" alt="Casual Shorts" />
+    <p class="title">Casual Shorts</p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div><div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_7._CB544074864_.png" height="100px" width="100px" alt="Casual Shorts" />
+    <p class="title">Casual Shorts</p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div><div class="card">
+    <img src="https://m.media-amazon.com/images/G/31/img24/Fashion/AF/BAU/Winterflip/Rec/ShopWomen/PC/SBC_8._CB544074864_.png" height="100px" width="100px" alt="Casual Shorts" />
+    <p class="title">Casual Shorts</p>
+    <p class="price">UNDER <span class="old">₹1099</span> ₹399</p>
+  </div>
+</div>
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Eyeliners__mascaras._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Kajal__kohls._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Eyeshadows._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Concealers._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br><div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Foundations._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Highlighters._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Lip_sticks._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Nails_paints._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Makeup_brushes._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/BB_CC_creams._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Make_up_Kits._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text">.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/unrec/Compacts._SX564_QL85_FMpng_.png" height="250px" width="150px" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container my-5">
+  <h4 class="mb-4">🛍️ Leading Brands| Beauty & Makeup</h4>
+  <div class="carousel-container d-flex">
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth-2._SY530_QL85_FMpng_.png" alt="Image 1">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth-1._SY530_QL85_FMpng_.png" alt="Image 2">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth-3._SY530_QL85_FMpng_.png" alt="Image 3">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth-4._SY530_QL85_FMpng_.png" alt="Image 4">
+    </div>
+<div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth-8._SY530_QL85_FMpng_.png" alt="Image 5">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth._SY530_QL85_FMpng_.png" alt="Image 6">
+    </div>
+    <div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth-6._SY530_QL85_FMpng_.png" alt="Image 6">
+    </div><div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth-7._SY530_QL85_FMpng_.png" alt="Image 6">
+    </div><div class="carousel-item-custom">
+      <img src="https://m.media-amazon.com/images/G/31/img24/Beauty/BAURevamp25/v2/Mamaearth-5._SY530_QL85_FMpng_.png" alt="Image 6">
+    </div>
+  </div>
+</div>
+  <footer class="bg-light text-dark pt-4 border-top">
+  <button onclick="topFunction()" id="backToTopBtn" title="Go to top"><center>Back to up</center></button>
+  <script>
+  const backToTopBtn = document.getElementById("backToTopBtn");
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      backToTopBtn.style.display = "block";
+    } else {
+      backToTopBtn.style.display = "none";
+    }
+  };
+
+  function topFunction() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+  <div class="container">
+    <div class="row"
+      class="col-md-3 col-6 mb-3">
+      <div>
+        <h6 class="text-uppercase fw-bold">Get to Know Us</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-dark text-decoration-none">About Myntra</a></li>
+          <li><a href="Home.html" class="text-dark text-decoration-none">Careers</a></li>
+          <li><a href="login.html" class="text-dark text-decoration-none">Press</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 col-6 mb-3">
+        <h6 class="text-uppercase fw-bold"> Connect with Help</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark text-decoration-none">Payments</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Shipping</a></li>
+          <li><a href="#" class="text-dark text-decoration-none">Cancellation</a></li>
+        </ul>
+      </div><div class="col-md-3 col-6 mb-3">
+        <h6 class="text-uppercase fw-bold">Social</h6>
+        <ul class="list-unstyled">
+          <li><a href="https://www.facebook.com/" class="text-dark text-decoration-none">Facebook</a></li>
+          <li><a href="https://x.com/" class="text-dark text-decoration-none">Twitter</a></li>
+          <li><a href="https://www.youtube.com/" class="text-dark text-decoration-none">YouTube</a></li>
+        </ul>
+      </div><div class="col-md-3 col-6 mb-3">
+        <h6 class="text-uppercase fw-bold">Contact Us</h6>
+        <ul class="list-unstyled">
+          <li><span class="text-muted small">Email:satya8700@gmail.com</span></li>
+          <li><span class="text-muted small">Phone: +91 12345 67890</span></li>
+          <li><span class="text-muted small">Address: kanpur, India</span></li>
+        </ul>
+      </div>
+    </div> <div class="text-center py-3 border-top">
+      <small class="text-muted">&copy; 2025 MyStore. devloped by satyam kumar jha</small>
+    </div>
+  </div>
+</div>
+</footer>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
